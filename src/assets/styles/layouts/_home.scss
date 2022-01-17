@@ -135,7 +135,7 @@ header {
         width: 28px;
         height: 4px;
         margin: 5px auto;
-        background-color: $afv-color-white;
+        background-color: black;
         border-radius: 1px;
       }
 
@@ -176,7 +176,7 @@ header {
 
           &.show {
             left: 0;
-            background-color: $afv-corporate-color;
+            background-color: white;
           }
   
           li {
@@ -185,7 +185,6 @@ header {
             margin: 26px 0;
             line-height: 2rem;
             text-align: center;
-            border-bottom: $afv-border-bottom $afv-lightness;
 
             &:last-child {
               margin-bottom:12px;
@@ -195,6 +194,7 @@ header {
             a {
               font-size: 1.1rem;
               opacity: 1; 
+              color: rgba(48, 69, 92, 0.8);
             }
           }
         }
@@ -284,6 +284,25 @@ header {
 }
 
 
+@media (max-width: $afv-media-tablet) {
+  .description {
+    width: 70vw;
+    top: 19vh;
+  }
+  .description h1 {
+    font-size: 2rem;
+  }
+  .description h3 {
+    font-size: 1.3rem;
+}
+
+}
+@media (max-width: $afv-media-phone) {
+  .description {
+    width: 70vw;
+    top: 19vh;
+  }
+}
 /* highlight */
 .highlight {
   
@@ -354,6 +373,62 @@ header {
   }
 }
 
+
+
+
+@media (max-width: $afv-media-tablet) {
+
+  .highlight .highlight-form {
+    display: block;
+}
+
+  .highlight .highlight-form .description-highlight {
+    left: 0;
+    width: 100vw;
+    padding-top: 10vh;
+  }
+
+  .highlight .highlight-form .description-highlight h3 {
+    width: 100%;
+    padding-left: 5.5vw;
+    padding-right:5.5vw;
+}
+.highlight .highlight-form .description-highlight p {
+  width: 100%;
+  padding-left: 5.5vw;
+  padding-right:5.5vw;
+
+}
+.highlight .highlight-form .description-highlight ul li {
+  width: 100%;
+  padding-left: 5.5vw;
+  padding-right:5.5vw;
+
+}
+.highlight .highlight-form .photo-highlight {
+  position: relative;
+  top: 0;
+  z-index: 0;
+  width: 90vw;
+  height: 60vh;
+  margin: 0 auto;
+}
+.highlight .highlight-form:first-child .photo-highlight {
+ display:none;
+}
+.highlight .highlight-form .description-highlight ul {
+  padding-bottom: 8vh;
+}
+}
+
+
+
+
+
+
+
+
+
 /* video */
 
 .video {
@@ -370,6 +445,13 @@ header {
     }
 }
 
+@media (max-width: $afv-media-tablet) {
+
+  .video iframe {
+    width: 100vw;
+    height: 53vh;
+}
+}
 /* features */
 
 .features {
@@ -427,54 +509,25 @@ header {
 }
 
 /* features */
-
-/* Media queries projects*/
 @media (max-width: $afv-media-tablet) {
-  .projects .container {
-      width: 100%;
-      padding-top: calc(66px + 6%);
-      padding-bottom:4%;
-
-      .row .card {
-        width: 90%;
-        margin-bottom:6%;
-
-          .card-header img {
-            height: 50vh;
-          }
-      }
-  }
+  .features .features-container .features-row .features-card {
+    width: 100%;
+}
+.features .features-container .features-row .features-card .features-card-body h1 {
+  padding-bottom: 0.4rem;
+  font-size: 1.8rem;
 }
 
-@media (max-width: $afv-media-phone) {
-  .projects .container {
-    padding-top: calc(33px + 7%);
-    padding-bottom: 0;
-
-    .row .card {
-      margin-bottom: 9%;
-
-      &:last-child{
-        margin-bottom: 0;
-      }
-
-      .card-body {
-          padding-bottom: 5%;
-      
-          h1 {
-            padding-top: 6%;
-            font-size: 1.3rem;
-          }
-
-          h3{
-            padding-top: 2%;
-            padding-bottom: 3%;
-            font-size: 1.05rem;
-          }
-      }
-    }
-  }
+.features .features-container .features-row .features-card .features-card-body p {
+  font-size: 1.1rem;
 }
+
+.features .features-container .features-row .features-card .features-card-body {
+  padding-bottom: 4%;
+}
+}
+/* Media queries projects*/
+
 
 /* course description*/
 .course-description{
@@ -614,6 +667,55 @@ section{
 }
 
 }
+
+@media (max-width: $afv-media-tablet) {
+
+.course-description-content {
+
+  padding-left: 5.5vw;
+  background-image:url("../images/images-tablet.png");
+  padding-top: 10vh;
+  padding-bottom: 6vh;
+}
+
+.course section {
+  width: 90vw;
+  text-align: center;
+  padding-left: 5vw;  padding-top: 8vh;
+  padding-bottom: 45vh;
+  padding-right: 5vw;
+  background-image:url("../images/course-tablet.jpg");
+  background-position: bottom;
+
+}
+.course section h1 {
+  padding-bottom: 1rem;
+  font-size: 2rem;
+
+  padding-top: 1rem;
+}
+
+
+
+.course section h3 {
+  margin-top: 1rem;
+}
+.course section .button {
+  font-size: 12px;
+  padding: 0 25px;
+}
+.faq h3 {
+  padding-right: 5vw;
+}
+
+
+}
+
+
+
+
+
+
 
 
 .faq{
@@ -1006,10 +1108,9 @@ footer {
 
   .footer-form-flex:nth-child(2) {
     width: 100%;
-    padding-bottom: .5rem;
-
-  }
-
+    padding-bottom: 0;
+    padding-top: 1rem;
+}
   .footer-form-flex:nth-child(3) {
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -1083,3 +1184,28 @@ footer {
 
 
 
+#accesos  h2 {
+  background-color: white;
+  font-size: 1.1rem;
+  font-weight: 400;
+  padding-top: 0.8rem;
+  padding-bottom: 0.5rem;
+}
+
+
+@media (max-width: $afv-media-tablet) {
+
+#accesos h2,
+#accesos input[type=checkbox]:checked ~ h2 {
+  background-color: white;
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding-top: 1.2rem;
+  padding-bottom: 1rem;
+}
+#accesos ul li i.chevron {
+
+  margin-top: 1.8rem;
+  scale: 1.1;
+}
+}
